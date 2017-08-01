@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body bgcolor="pink" link=" #3352e1 ">
+    <h2>MASTER</h2>
+<button class="accordion" onclick=disp>city</button>
+<div class="panel">
+       
+   <table  bgcolor="silver">
+<tr><td> <a href="ins.jsp" target=info  > INSERT </a></td></tr>
+<tr><td> <a href="search.jsp" target=info > SEARCH </a></td>
+<tr><td> <a href="updatec.jsp" target=info>UPDATE </a></td></tr>
+<tr><td> <a href="delet.jsp" target=info>DELETE </a></td></tr>
+<tr><td> <a href="view.jsp" target=info>VIEW </a></td></tr>
+
+   </table>
+   
+</div>
+
+<button class="accordion">employee</button>
+<div class="panel">
+ <table bgcolor="silver">
+<tr><td> <a href="inse.jsp" target=info > INSERT </a></td></tr>
+<tr><td> <a href="searche.jsp" target=info > SEARCH </a></td>
+<tr><td> <a href="updatee.jsp" target=info>UPDATE </a></td></tr>
+<tr><td> <a href="deletee.jsp" target=info>DELETE </a></td></tr>
+<tr><td> <a href="viewe.jsp" target=info>VIEW </a></td></tr>
+ </table>
+</div>
+
+<button class="accordion">item</button>
+<div class="panel">
+  <table bgcolor="silver">
+<tr><td> <a href="insi.jsp" target=info > INSERT </a></td></tr>
+<tr><td> <a href="searchi.jsp" target=info > SEARCH </a></td>
+<tr><td> <a href="updatei.jsp" target=info>UPDATE </a></td></tr>
+<tr><td> <a href="deletei.jsp" target=info>MOVE TO SCRAP </a></td></tr>
+<tr><td> <a href="viewi.jsp" target=info>VIEW </a></td></tr>
+
+   </table>
+</div>
+
+<button class="accordion">item category</button>
+<div class="panel">
+    <table bgcolor="silver">
+        <tr><td> <a href="insc.jsp" target=info > INSERT </a></td></tr>
+<tr><td> <a href="searchc.jsp" target=info > SEARCH </a></td>
+<tr><td> <a href="updateic.jsp" target=info>UPDATE </a></td></tr>
+<tr><td> <a href="deletec.jsp" target=info>DELETE </a></td></tr>
+<tr><td> <a href="viewc.jsp" target=info>VIEW </a></td></tr>
+
+   </table>
+</div>
+
+<button class="accordion">department</button>
+<div class="panel">
+ <table bgcolor="silver">
+<tr><td> <a href="insd.jsp" target=info > INSERT </a></td></tr>
+<tr><td> <a href="searchd.jsp" target=info > SEARCH </a></td>
+<tr><td> <a href="updated.jsp" target=info>UPDATE </a></td></tr>
+<tr><td> <a href="deleted.jsp" target=info>DELETE </a></td></tr>
+<tr><td> <a href="viewd.jsp" target=info>VIEW </a></td></tr>
+
+   </table>  
+</div>
+
+
+<button class="accordion">location</button>
+<div class="panel">
+  <table bgcolor="silver">
+<tr><td> <a href="insl.jsp" target=info > INSERT </a></td></tr>
+<tr><td> <a href="searchl.jsp" target=info > SEARCH </a></td>
+<tr><td> <a href="updatel.jsp" target=info>UPDATE </a></td></tr>
+<tr><td> <a href="deletel.jsp" target=info>DELETE </a></td></tr>
+<tr><td> <a href="viewl.jsp" target=info>VIEW </a></td></tr>
+
+   </table>
+</div>
+
+<button class="accordion">supplier</button>
+<div class="panel">
+  <table bgcolor="silver">
+<tr><td> <a href="inss.jsp" target=info > INSERT </a></td></tr>
+<tr><td> <a href="searchs.jsp" target=info > SEARCH </a></td>
+<tr><td> <a href="updates.jsp" target=info>UPDATE </a></td></tr>
+<tr><td> <a href="deletes.jsp" target=info>DELETE </a></td></tr>
+<tr><td> <a href="views.jsp" target=info>VIEW </a></td></tr>
+
+   </table>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+function disp()
+{
+    alert("proceeding to city menu");
+}
+</script>
+
+</body>
+</html>
